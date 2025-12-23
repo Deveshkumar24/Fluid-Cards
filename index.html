@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Call Cards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="side-buttons">
+      <button id="add-note-btn">+</button>
+      <button id="up-btn">↑</button>
+      <button id="down-btn">↓</button>
+    </div>
+
+    <div class="cards-wrapper">
+      <div class="card">
+        <div class="profile">
+          <img src="https://media.istockphoto.com/id/1433335533/photo/vertical-shot-of-a-baba-ji-pilgrim-at-muktinath-mountain-temple-in-mustang-nepal.webp?a=1&b=1&s=612x612&w=0&k=20&c=FY3xmgCd0KtLSS8znska1cvKdUbdb-VgjJWD2oRiEBs= " alt="Profile" />
+          <h2>Baba ji</h2>
+        </div>
+        <div class="details">
+          <div><p>Home town</p><p>Bookings</p></div>
+          <div><p>Aashram</p><p>3 times</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="profile">
+          <img src="https://media.istockphoto.com/id/2228903535/photo/handsome-single-man-on-a-touristic-day-trip-in-bolzano-italy-in-the-summer.webp?a=1&b=1&s=612x612&w=0&k=20&c=lgOV7A7oJvBEuRwmoXwKok5EYpt0DY6P8LVSx35g1YE=" alt="Profile" />
+          <h2>DD Bhai</h2>
+        </div>
+        <div class="details">
+          <div><p>Home town</p><p>Bookings</p></div>
+          <div><p>Lakshmanpuri</p><p>2 times</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" />
+          <h2>Raga Bhai</h2>
+        </div>
+        <div class="details">
+          <div><p>Home town</p><p>Bookings</p></div>
+          <div><p>Gadaura</p><p>5 times</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="form-modal" class="modal-overlay">
+    <div class="modal-content">
+      <h2>New Call</h2>
+      <form id="new-call-form">
+        <div class="form-group">
+          <label for="image-url">Image URL</label>
+          <input required type="url" id="image-url" name="imageUrl" placeholder="https://example.com/photo.jpg">
+        </div>
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input required type="text" id="full-name" name="fullName" placeholder="Enter full name">
+        </div>
+        <div class="form-group">
+          <label for="home-town">Home Town</label>
+          <input required type="text" id="home-town" name="homeTown" placeholder="Enter home town">
+        </div>
+        <div class="form-group">
+          <label for="purpose">Purpose</label>
+          <input required type="text" id="purpose" name="purpose" placeholder="e.g., Quick appointment note">
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <div class="category-group">
+            <label><input type="radio" name="category" value="Emergency" checked> Emergency</label>
+            <label><input type="radio" name="category" value="Important"> Important</label>
+            <label><input type="radio" name="category" value="Urgent"> Urgent</label>
+            <label><input type="radio" name="category" value="No Rush"> No Rush</label>
+          </div>
+        </div>
+        <div class="modal-actions">
+           <button type="submit" id="create-note-btn">Create Note</button>
+           <button type="button" id="close-form-btn">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
